@@ -16,6 +16,20 @@ class Empleado{
         $this -> email = $email;
         $this -> codigo = $codigo;
     }
+
+    public function ImprimirDatos(){
+        echo $this->nombre." ".$this->apellido;
+    }
+
+    // Get - Obtener un valor
+    public function getNombre(){
+        return $this->nombre;
+    }
+
+    // Set - Modificar un valor
+    public function setNombre($nombre){
+        $this->nombre = $nombre;
+    }
 }
 
 $empleado = new Empleado("Hedson","Zubiri","Desarrollo","correo","117");
@@ -26,5 +40,11 @@ $empleado = new Empleado("Hedson","Zubiri","Desarrollo","correo","117");
 
 echo "<pre>";
 var_dump($empleado);
-echo "</pre>";
+echo "</pre> ";
+
+$empleado->ImprimirDatos();
+
+$empleado->setNombre(" Nuevo nombre");
+
+echo $empleado->getNombre();
 
